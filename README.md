@@ -176,8 +176,6 @@ El Realm utilizado fue:
 keycloak-demo
 ```
 
-> **Evidencia:** insertar aquí la captura del Realm `keycloak-demo`.
-
 ---
 
 ## 7. Configuración de Google OAuth 2.0
@@ -195,8 +193,6 @@ http://localhost:8080/realms/keycloak-demo/broker/google/endpoint
 ```
 
 Esta URI corresponde al endpoint de Keycloak y no directamente a la aplicación Node.js.
-
-> **Evidencia:** insertar aquí la captura de la configuración del cliente OAuth 2.0 en Google Cloud.
 
 ---
 
@@ -218,8 +214,6 @@ http://localhost:8080/realms/keycloak-demo/broker/google/endpoint
 ```
 
 > **Importante:** el Client Secret es una credencial sensible y no debe publicarse en el repositorio.
-
-> **Evidencia:** insertar aquí la captura de Google configurado como Identity Provider en Keycloak.
 
 ---
 
@@ -256,8 +250,6 @@ El **Standard Flow** corresponde al flujo de autorización utilizado por la apli
 | **Valid post logout redirect URIs** | `http://localhost:3000/*` |
 | **Web origins** | `http://localhost:3000` |
 
-> **Evidencia:** insertar aquí la captura de la configuración del cliente `dummy-app`.
-
 ---
 
 ## 10. Creación del rol `user`
@@ -283,8 +275,6 @@ El rol se asignó posteriormente al usuario autenticado mediante Google.
 Esto permite demostrar que Keycloak no solamente realiza la autenticación, sino que también permite gestionar autorización mediante roles.
 
 > **Evidencia:** insertar aquí la captura de la creación del rol `user`.
-
-> **Evidencia adicional:** insertar aquí la captura de la asignación del rol al usuario.
 
 ---
 
@@ -329,9 +319,6 @@ Se instalaron las dependencias:
 ```bash
 npm install express express-session openid-client
 ```
-
-> **Evidencia:** insertar aquí la captura de la instalación y configuración del proyecto Node.js.
-
 ---
 
 ## 12. Configuración de OpenID Connect
@@ -448,8 +435,6 @@ Hola Mundo, <usuario>
 
 Esto demuestra que la aplicación recibió correctamente la información del usuario después del proceso de autenticación.
 
-> **Evidencia:** insertar aquí la captura final de la aplicación mostrando `Hola Mundo, <usuario>`.
-
 ---
 
 ## 15. Conclusiones
@@ -464,37 +449,3 @@ Además, la creación del rol `user` permitió demostrar la utilización de Keyc
 
 ---
 
-## 16. Evidencias del proyecto
-
-Las capturas utilizadas en este documento deben almacenarse en el repositorio dentro de una carpeta como:
-
-```text
-screenshots/
-```
-
-Una organización sugerida es:
-
-```text
-screenshots/
-├── 01-docker-funcionando.png
-├── 02-keycloak-docker.png
-├── 03-realm-keycloak-demo.png
-├── 04-google-oauth-client.png
-├── 05-google-keycloak.png
-├── 06-google-login.png
-├── 07-dummy-app-client.png
-├── 08-role-user.png
-├── 09-user-role.png
-└── 10-hola-mundo.png
-```
-
-En el repositorio también se recomienda evitar publicar:
-
-```text
-keycloak_data/
-node_modules/
-.env
-*.log
-```
-
-Además, nunca se debe publicar el **Client Secret de Google**, contraseñas, tokens u otras credenciales.

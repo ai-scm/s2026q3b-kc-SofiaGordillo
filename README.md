@@ -106,8 +106,6 @@ La solución implementada utiliza tres componentes principales:
 
 Luego de realizar la instalación de Docker, se comprobó su versión y funcionamiento.
 
-> **Evidencia:** insertar aquí la captura correspondiente a la instalación y comprobación de Docker.
-
 ---
 
 ## 5. Implementación de Keycloak
@@ -161,9 +159,6 @@ Keycloak quedó disponible en:
 ```text
 http://localhost:8080
 ```
-
-> **Evidencia:** insertar aquí la captura de `docker ps` y/o de Keycloak ejecutándose.
-
 ---
 
 ## 6. Creación del Realm
@@ -212,9 +207,6 @@ La URI de redireccionamiento generada por Keycloak fue:
 ```text
 http://localhost:8080/realms/keycloak-demo/broker/google/endpoint
 ```
-
-> **Importante:** el Client Secret es una credencial sensible y no debe publicarse en el repositorio.
-
 ---
 
 ## 9. Creación del cliente `dummy-app`
@@ -273,8 +265,6 @@ Create role
 El rol se asignó posteriormente al usuario autenticado mediante Google.
 
 Esto permite demostrar que Keycloak no solamente realiza la autenticación, sino que también permite gestionar autorización mediante roles.
-
-> **Evidencia:** insertar aquí la captura de la creación del rol `user`.
 
 ---
 
